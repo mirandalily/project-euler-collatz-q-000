@@ -24,4 +24,15 @@ def collatz(n)
 end
 
 def longest_collatz
+  n = 1
+  longest_start = 1
+  longest_length = 1
+  while n < 999999
+    if collatz(n).length > longest_length
+      longest_start = n
+      longest_length = collatz(n).length
+    end
+    n += 1
+  end
+  return longest_start
 end
