@@ -7,6 +7,11 @@ def odd_next(n)
 end
 
 def next_value(n)
+  if n.even?
+    even_next(n)
+  else
+    odd_next(n)
+  end
 end
 
 def collatz(n)
